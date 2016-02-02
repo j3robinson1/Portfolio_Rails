@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title RealPortfolio
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-default.navbar-fixed-top
+      %h3.center.navbar-left.text-muted Jesse Robinson
+      %ul.center.nav.nav-tabs.navbar-right
+        %li
+          = link_to portfolios_path do
+            Portfolio
+        %li
+          = link_to root_path do
+            Resume
+        %li
+          = link_to root_path do
+            About Me
+    = yield

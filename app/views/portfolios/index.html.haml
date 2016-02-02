@@ -1,0 +1,8 @@
+%h1.text-muted.center Portfolio
+
+- @portfolios.each do |portfolio|
+  %span.border
+    %form.btn-default{:action => portfolio.url}
+      %input#saveForm.btTxt.submit{:name => "saveForm", :width => "250", :src => portfolio.image, :type => "image"}
+
+/ = link_to 'New Portfolio', new_portfolio_path
